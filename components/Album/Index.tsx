@@ -11,7 +11,7 @@ export type AlbumProps = {
 const Album = (props) => {
     <View>
         <Image source={{{uri: props.imageUri }} />
-            <Text>{props}
+            <Text>{props}<Text>
         {/* Image of the Album */}
         {/* Artists headlines */}
 
