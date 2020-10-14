@@ -14,10 +14,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee65f4dc-f0a7-4a49-bd4a-f0c1fae24175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Spotify.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SongListItem/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SongListItem/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/albumCategories.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/albumDetails.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/AlbumScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Spotify.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Spotify.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Album/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Album/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Album/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Album/styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AlbumCategory/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AlbumCategory/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AlbumCategory/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/AlbumCategory/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/BottomTabNavigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/BottomTabNavigator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/HomeScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/types.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +46,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="emulator" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="vt-x" />
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -60,5 +79,33 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="670" y="445" key="#Notifications" timestamp="1602636207089">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="670" y="445" key="#Notifications/-1200.-310.1200.1890/0.0.1920.1170/1920.116.1280.689@0.0.1920.1170" timestamp="1602636207088" />
+    <state x="185" y="183" width="1200" height="800" key="AVDManager" timestamp="1602653138172">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="185" y="183" width="1200" height="800" key="AVDManager/-1200.-261.1200.1890/0.0.1920.1170@0.0.1920.1170" timestamp="1602653138172" />
+    <state x="185" y="183" width="1200" height="800" key="AVDManager/-1200.-310.1200.1890/0.0.1920.1170/1920.116.1280.689@0.0.1920.1170" timestamp="1602636840527" />
+    <state x="565" y="324" key="FileChooserDialogImpl" timestamp="1602636813707">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="565" y="324" key="FileChooserDialogImpl/-1200.-310.1200.1890/0.0.1920.1170/1920.116.1280.689@0.0.1920.1170" timestamp="1602636813707" />
+    <state x="286" y="227" key="SettingsEditor" timestamp="1602636742021">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="286" y="227" key="SettingsEditor/-1200.-310.1200.1890/0.0.1920.1170/1920.116.1280.689@0.0.1920.1170" timestamp="1602636742021" />
+    <state x="441" y="274" key="run.anything.popup" timestamp="1602636595868">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="441" y="274" key="run.anything.popup/-1200.-310.1200.1890/0.0.1920.1170/1920.116.1280.689@0.0.1920.1170" timestamp="1602636595868" />
+    <state x="448" y="302" width="672" height="678" key="search.everywhere.popup" timestamp="1602636666816">
+      <screen x="0" y="0" width="1920" height="1170" />
+    </state>
+    <state x="448" y="302" width="672" height="678" key="search.everywhere.popup/-1200.-310.1200.1890/0.0.1920.1170/1920.116.1280.689@0.0.1920.1170" timestamp="1602636666816" />
   </component>
 </project>

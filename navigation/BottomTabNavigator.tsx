@@ -11,9 +11,10 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/HomeScreen';
+import HomeScreen from '../screens/HomeScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import {BottomTabParamList, TabOneParamList, TabTwoParamList} from '../types';
+import AlbumScreen from "../screens/AlbumScreen";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -28,7 +29,8 @@ export default function BottomTabNavigator() {
                 name="Home"
                 component={TabOneNavigator}
                 options={{
-                    tabBarIcon: ({color}) => <Entypo name="home" size={30} style={{marginBottom: -3}} color={color}/>,
+                    tabBarIcon: ({color}) => <FontAwesome5 name="home" size={30} style={{marginBottom: -3}}
+                                                           color={color}/>,
                 }}
             />
             <BottomTab.Screen
@@ -58,6 +60,7 @@ export default function BottomTabNavigator() {
         </BottomTab.Navigator>
     );
 }
+
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab

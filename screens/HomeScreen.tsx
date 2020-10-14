@@ -1,57 +1,96 @@
+import {
+    Ionicons,
+    Entypo,
+    EvilIcons,
+    MaterialCommunityIcons,
+    FontAwesome5
+} from '@expo/vector-icons';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createStackNavigator} from '@react-navigation/stack';
 import * as React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import AlbumCategory from "../components/AlbumCategory";
-// import EditScreenInfo from '../components/EditScreenInfo';
 
-// import { Text, View } from '../components/Themed';
-const albumCategory  ={
-    id: '1',
-    title: 'Happy Vibes',
-albums: [
-    {
-        id: '1',
-        imageUri: 'https://cache.boston.com/resize/bonzai-fba/Globe_Photo/2011/04/14/1302796985_4480/539w.jpg',
-        artistsHeadline: 'Taylor Swift, Kygo Objective C, Avicii'
-    }, {
-        id: '2',
-        imageUri: 'https://cdn6.f-cdn.com/contestentries/1485199/27006121/5ca3e39ced7f1_thumb900.jpg',
-        artistsHeadline: 'Post Malone, Drake, Eminem'
-    },
-    {
-        id: '3',
-        imageUri: 'https://images-na.ssl-images-amazon.com/images/I/61F66QURFyL.jpg',
-        artistsHeadline: 'Journey, Escape, Avicii'
-    },
-    {
-        id: '4',
-        imageUri: 'https://i.pinimg.com/originals/a2/0d/37/a20d37791f8ad5cd54734cd3af559cc9.jpg',
-        artistsHeadline: 'Bob Marley, Cardi B, Stas Mihailov'
-    },
-]
-}
-;
+import Colors from '../constants/Colors';
+import useColorScheme from '../hooks/useColorScheme';
+import TabOneScreen from '../screens/HomeScreen';
+import TabTwoScreen from '../screens/TabTwoScreen';
+import {BottomTabParamList, TabOneParamList, TabTwoParamList} from '../types';
+import AlbumScreen from "../screens/AlbumScreen";
 
-export default function HomeScreen() {
+const BottomTab = createBottomTabNavigator<BottomTabParamList>();
+
+export default function BottomTabNavigator() {
+    const colorScheme = useColorScheme();
+
     return (
-        <View style={styles.container}>
-            <AlbumCategory title={albumCategory.title} albums={albumCategory.album}/>
-        </View>
+        <BottomTab.Navigator
+            initialRouteName="TabOne"
+            tabBarOptions={{activeTintColor: Colors[colorScheme].tint}}>
+            <BottomTab.Screen
+                name="Home"
+                component={TabOneNavigator}
+                options={{
+                    tabBarIcon: ({color}) => <Entypo name="home" size={30} style={{marginBottom: -3}} color={color}/>,
+                }}
+            />
+            <BottomTab.Screen
+                name="Search"
+                component={TabTwoNavigator}
+                options={{
+                    tabBarIcon: ({color}) => <EvilIcons name="search" size={30} style={{marginBottom: -3}}
+                                                        color={color}/>,
+                }}
+            />
+            <BottomTab.Screen
+                name="Your Library"
+                component={TabTwoNavigator}
+                options={{
+                    tabBarIcon: ({color}) => <MaterialCommunityIcons name="library-music-outline" size={30}
+                                                                     style={{marginBottom: -3}} color={color}/>,
+                }}
+            />
+            <BottomTab.Screen
+                name="Premium"
+                component={TabTwoNavigator}
+                options={{
+                    tabBarIcon: ({color}) => <FontAwesome5 name="spotify" size={30} style={{marginBottom: -3}}
+                                                           color={color}/>,
+                }}
+            />
+        </BottomTab.Navigator>
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    title: {
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-    separator: {
-        marginVertical: 30,
-        height: 1,
-        width: '80%',
-    },
-});
+// Each tab has its own navigation stack, you can read more about this pattern here:
+// https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
+const TabOneStack = createStackNavigator<TabOneParamList>();
+
+function TabOneNavigator() {
+    return (
+        <TabOneStack.Navigator>
+            <TabOneStack.Screen
+                name="TabOneScreen"
+                component={TabOneScreen}
+                options={{headerTitle: 'Home'}}
+            />
+            <TabOneStack.Screen
+                name="AlbumScreen"
+                component={AlbumScreen}
+                options={{headerTitle: 'Album'}}
+            />
+        </TabOneStack.Navigator>
+    );
+}
+
+const TabTwoStack = createStackNavigator<TabTwoParamList>();
+
+function TabTwoNavigator() {
+    return (
+        <TabTwoStack.Navigator>
+            <TabTwoStack.Screen
+                name="TabTwoScreen"
+                component={TabTwoScreen}
+                options={{headerTitle: 'Tab Two Title'}}
+            />
+        </TabTwoStack.Navigator>
+    );
+}

@@ -2,16 +2,16 @@ import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
     container: {
-        width: 200,
-        backgroundColor: 'red'
+        width: 155,
+        margin: 10,
     },
     image: {
         width: '100%',
-        height: 200,
-        marginTop: 10,
+        height: 145,
     },
     text: {
-        color: 'grey'
+        color: 'grey',
+        marginTop: 10,
     }
 })
 export default styles;
